@@ -3,7 +3,8 @@
   --second-color: #4d5ae5;
   --hover-color: #404bbf;
   --text-color: #434455;
-  --text-transiton: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  --text-transiton: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --text--cloud: #404bbf;
 }
 
 body {
@@ -537,33 +538,34 @@ margin-bottom: 16px;
 }
 
 .footer-subscripe {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #FFFFFF;
+  
 }
 
-.footer-subscripe{
-
-}
-
-
-.footer-label {
+.form-subscripe {
   display: flex;
+}
+
+.footer-subsripe-title {
+  /* display: flex; */
 margin-bottom: 16px;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #FFFFFF;
 }
 
 .footer-input {
   width: 264px;
   height: 40px;
-  padding: 8px 16px;
+  padding-left: 16px;
   display: flex;
   border: 1px solid #FFFFFF;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
 background-color: transparent;
 color: #FFFFFF;
+margin-right: 24px;
 
 }
 
@@ -586,16 +588,15 @@ color: #FFFFFF;
     color: #ffffff;
     background-color: var(--second-color);
     cursor: pointer;
-    padding: 8px 24px;
-    margin-top: auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
     transition: background-color var(--text-transiton);
     display: flex;
+    gap: 16px;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    
 }
 
 
@@ -606,6 +607,7 @@ color: #FFFFFF;
 
 .footer-subscripe-icon {
   fill: #ffffff;
+ 
 }
 
 
@@ -763,7 +765,7 @@ padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%) scaleY(0);
 }
 
-.backdrop-btn {
+.backdrop-btn-close {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -781,7 +783,7 @@ display: flex;
 }
 
 
-.backdrop-btn:hover, .backdrop-btn:focus {
+.backdrop-btn-close:hover, .backdrop-btn-close:focus {
   background-color: var(--hover-color);
 border-radius: 4px;
 border: none;
@@ -790,7 +792,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
 }
 
 
-.backdrop-btn:hover .backdrop-icon, .backdrop-btn:focus .backdrop-icon {
+.backdrop-btn-close:hover .backdrop-icon, .backdrop-btn-close:focus .backdrop-icon {
   fill: #ffffff;
 }
 
@@ -806,6 +808,7 @@ line-height: 1.5;
 text-align: center;
 letter-spacing: 0.02em;
 color: var(--main-color);
+margin-bottom: 16px;
 
 }
 
@@ -832,6 +835,8 @@ padding-left: 38px;
 padding-right: 16px;
 outline: transparent;
 transition: var(--text-transiton);
+display: block;
+transition: border-color var(--text-transiton);
 
 }
 
@@ -873,6 +878,10 @@ padding: 8px 16px;
 outline: transparent;
 transition: var(--text-transiton);
 resize: none;
+font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  transition: border-color var(--text-transiton);
 
 
 }
@@ -884,9 +893,13 @@ letter-spacing: 0.04em;
 color: rgba(46, 47, 66, 0.4);
 }
 
+.check-wrap {
+  margin-bottom: 24px;
+}
 
-.input-check:checked + .check-text span {
-  background-color: #4d5ae5;
+
+.input-check:checked + .check-span {
+  background-color: var(--hover-color);
   fill: #F4F4FD;
   border: none;
 }
@@ -900,26 +913,54 @@ display: flex;
 align-items: center;
 }
 
-.check-text a{
+.check-link{
   color: var(--second-color);
   margin-left: 2px;
 }
 
-.check-text span {
+.check-span {
   width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-border-radius: 2px;
-display: flex;
-  align-items: center;
-  justify-content: center;
-margin-right: 8px;
-fill: transparent;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    fill: transparent;
+    /* display: inline-flex; */
 }
+
+
 
 .check-icon {
   
 }
+
+.backdrop-btn-send{
+  min-width: 169px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background-color: var(--second-color);
+    cursor: pointer;
+    display: block;
+    padding: 16px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    transition: background-color var(--text-transiton);
+}
+
+.backdrop-btn-send:hover,
+.backdrop-btn-send:focus {
+  background-color: var(--hover-color);}
 
 .is-hidden {
   visibility: hidden;
