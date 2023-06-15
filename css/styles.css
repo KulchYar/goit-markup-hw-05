@@ -564,6 +564,9 @@ border-radius: 4px;
 background-color: transparent;
 color: #FFFFFF;
 margin-right: 24px;
+font-size: 12px;
+line-height: 1.5;
+letter-spacing: 0.004em;
 
 }
 
@@ -591,7 +594,6 @@ color: #FFFFFF;
     border: none;
     transition: background-color var(--text-transiton);
     display: flex;
-    gap: 16px;
     justify-content: center;
     align-items: center;
     
@@ -605,6 +607,7 @@ color: #FFFFFF;
 
 .footer-subscripe-icon {
   fill: #ffffff;
+  margin-left: 16px;
  
 }
 
@@ -909,8 +912,7 @@ font-size: 12px;
 line-height: 1.17;
 letter-spacing: 0.04em;
 color: #8E8F99;
-display: flex;
-align-items: center;
+
 }
 
 .check-link{
