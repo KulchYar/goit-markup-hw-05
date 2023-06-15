@@ -923,12 +923,13 @@ align-items: center;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-   
+  display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-right: 8px;
     fill: transparent;
-    display: inline-flex;
+    transition: background-color var(--text-transiton), border var(--text-transiton), fill var(--text-transiton);
+    
 }
 
 
